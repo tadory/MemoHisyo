@@ -18,9 +18,14 @@
 {
     
     [super viewDidLoad];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return YES;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
