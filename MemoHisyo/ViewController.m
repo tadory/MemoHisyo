@@ -19,13 +19,16 @@
     
     [super viewDidLoad];
     
+    [textView becomeFirstResponder];
+    
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return YES;
+-(IBAction) kanryou{
+    [textView resignFirstResponder];
 }
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

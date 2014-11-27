@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ViewController : UIViewController
+{
+    IBOutlet UITextView *textView;
+}
+-(IBAction) kanryou;
 
 @end
+
+

@@ -21,6 +21,8 @@
 		D2203EB71A1E073800679EBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2203E991A1E073800679EBC /* UIKit.framework */; };
 		D2203EBF1A1E073800679EBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2203EBD1A1E073800679EBC /* InfoPlist.strings */; };
 		D2203EC11A1E073800679EBC /* MemoHisyoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2203EC01A1E073800679EBC /* MemoHisyoTests.m */; };
+		D26AE4981A2741000032A2FA /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D26AE4971A2741000032A2FA /* CalendarView.m */; };
+		D26AE49B1A27414B0032A2FA /* CalenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26AE49A1A27414B0032A2FA /* CalenderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		D2203EBC1A1E073800679EBC /* MemoHisyoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoHisyoTests-Info.plist"; sourceTree = "<group>"; };
 		D2203EBE1A1E073800679EBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2203EC01A1E073800679EBC /* MemoHisyoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoHisyoTests.m; sourceTree = "<group>"; };
+		D26AE4961A2741000032A2FA /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		D26AE4971A2741000032A2FA /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		D26AE4991A27414B0032A2FA /* CalenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalenderViewController.h; sourceTree = "<group>"; };
+		D26AE49A1A27414B0032A2FA /* CalenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalenderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +121,12 @@
 				D2203EA41A1E073800679EBC /* AppDelegate.h */,
 				D2203EA51A1E073800679EBC /* AppDelegate.m */,
 				D2203EA71A1E073800679EBC /* Main.storyboard */,
+				D26AE4961A2741000032A2FA /* CalendarView.h */,
+				D26AE4971A2741000032A2FA /* CalendarView.m */,
 				D2203EAA1A1E073800679EBC /* ViewController.h */,
 				D2203EAB1A1E073800679EBC /* ViewController.m */,
+				D26AE4991A27414B0032A2FA /* CalenderViewController.h */,
+				D26AE49A1A27414B0032A2FA /* CalenderViewController.m */,
 				D2203EAD1A1E073800679EBC /* Images.xcassets */,
 				D2203E9C1A1E073800679EBC /* Supporting Files */,
 			);
@@ -249,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26AE49B1A27414B0032A2FA /* CalenderViewController.m in Sources */,
 				D2203EAC1A1E073800679EBC /* ViewController.m in Sources */,
 				D2203EA61A1E073800679EBC /* AppDelegate.m in Sources */,
 				D2203EA21A1E073800679EBC /* main.m in Sources */,
+				D26AE4981A2741000032A2FA /* CalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +468,7 @@
 				D2203EC61A1E073800679EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2203EC71A1E073800679EBC /* Build configuration list for PBXNativeTarget "MemoHisyoTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +477,7 @@
 				D2203EC91A1E073800679EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
