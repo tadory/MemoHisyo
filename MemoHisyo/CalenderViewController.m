@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   
+    
+
     // Do any additional setup after loading the view.
     
     //カレンダーを表示
@@ -26,6 +30,18 @@
     _sampleView.calendarDate = [NSDate date];
     [self.view addSubview:_sampleView];
     // Do any additional setup after loading the view.
+    
+    
+    
+    
+    UIImage *img = [UIImage imageNamed:@"MEMO.png"];  // ボタンにする画像を生成する
+    UIButton *btn = [[UIButton alloc]
+                     initWithFrame:CGRectMake(20, 443, 140, 80)];  // ボタンのサイズを指定する
+    [btn setBackgroundImage:img forState:UIControlStateNormal];  // 画像をセットする
+    // ボタンが押された時にhogeメソッドを呼び出す
+    [btn addTarget:self
+            action:@selector(memo) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,5 +63,11 @@
 {
     NSLog(@"tappedOnDate %@(GMT)",selectedDate);
 }
+
+- (void)memo
+{
+    NSLog(@"tapped");
+}
+
 
 @end
