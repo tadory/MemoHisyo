@@ -42,6 +42,15 @@
     [btn addTarget:self
             action:@selector(memo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    UIImage *img2 = [UIImage imageNamed:@"m.png"];  // ボタンにする画像を生成する
+    UIButton *btn2 = [[UIButton alloc]
+                     initWithFrame:CGRectMake(160, 443, 140, 80)];  // ボタンのサイズを指定する
+    [btn2 setBackgroundImage:img2 forState:UIControlStateNormal];  // 画像をセットする
+    // ボタンが押された時にhogeメソッドを呼び出す
+    [btn2 addTarget:self
+            action:@selector(done) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,12 +70,31 @@
 
 -(void)tappedOnDate:(NSDate *)selectedDate
 {
-    NSLog(@"tappedOnDate %@(GMT)",selectedDate);
+    NSLog(@"tappedOnDate %@(GMT)", selectedDate);
+    
+    
+//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//    df.dateFormat = @"dd";
+//    
+//    NSInteger tag = [[df stringFromDate:selectedDate] integerValue];
+//    UIButton *tappeButton = (UIButton *)[self.view viewWithTag:tag];
+//    [tappeButton setBackgroundColor:[UIColor brownColor]];
+//    [tappeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 - (void)memo
 {
-    NSLog(@"tapped");
+    NSLog(@"back");
+    
+    // UIViewController
+    // [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // UINavigationController
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)done
+{
+
 }
 
 

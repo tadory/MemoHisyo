@@ -207,7 +207,7 @@
     }
 
 }
--(IBAction)tappedDate:(UIButton *)sender
+-(void)tappedDate:(UIButton *)sender
 {
     gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components = [gregorian components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self.calendarDate];
@@ -215,9 +215,9 @@
     {
         if(_selectedDate != -1)
         {
-            UIButton *previousSelected =(UIButton *) [self viewWithTag:_selectedDate];
-            [previousSelected setBackgroundColor:[UIColor clearColor]];
-            [previousSelected setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
+//            UIButton *previousSelected =(UIButton *) [self viewWithTag:_selectedDate];
+//            [previousSelected setBackgroundColor:[UIColor clearColor]];
+//            [previousSelected setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
             
         }
         

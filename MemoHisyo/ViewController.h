@@ -12,8 +12,11 @@
 @interface ViewController : UIViewController
 {
     IBOutlet UITextView *textView;
+    IBOutlet UIButton *buttonA;
+    IBOutlet UIButton *buttonB;
 }
--(IBAction) kanryou;
+
+-(IBAction)kanryou;
 
 @end
 

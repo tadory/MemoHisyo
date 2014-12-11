@@ -18,19 +18,26 @@
 {
     
     [super viewDidLoad];
+    
     UIImage *img = [UIImage imageNamed:@"MEMO.png"];  // ボタンにする画像を生成する
-    UIButton *btn = [[UIButton alloc]
+    buttonA = [[UIButton alloc]
                       initWithFrame:CGRectMake(20, 443, 140, 80)];  // ボタンのサイズを指定する
-    [btn setBackgroundImage:img forState:UIControlStateNormal];  // 画像をセットする
+    [buttonA setBackgroundImage:img forState:UIControlStateNormal];  // 画像をセットする
     // ボタンが押された時にhogeメソッドを呼び出す
-    [btn addTarget:self
+    [buttonA addTarget:self
             action:@selector(memo) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    [self.view addSubview:buttonA];
     
-    [textView becomeFirstResponder];
-   
     
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIImage *imga = [UIImage imageNamed:@"m.png"];  // ボタンにする画像を生成する
+    buttonB = [[UIButton alloc]
+                     initWithFrame:CGRectMake(160, 443, 140, 80)];  // ボタンのサイズを指定する
+    [buttonB setBackgroundImage:imga forState:UIControlStateNormal];  // 画像をセットする
+    // ボタンが押された時にhogeメソッドを呼び出す
+    [buttonB addTarget:self
+            action:@selector(done) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:buttonB];
 }
 
 
@@ -41,6 +48,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 
+    [textView becomeFirstResponder];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -74,4 +82,8 @@
      NSLog(@"tapped");
 }
 
+- (void)done
+{
+    [self performSegueWithIdentifier:@"Detail" sender:nil];
+}
 @end
