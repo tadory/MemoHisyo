@@ -30,7 +30,7 @@
     
     
     
-    UIImage *imga = [UIImage imageNamed:@"m.png"];  // ボタンにする画像を生成する
+    UIImage *imga = [UIImage imageNamed:@"settei.png"];  // ボタンにする画像を生成する
     buttonB = [[UIButton alloc]
                      initWithFrame:CGRectMake(160, 443, 140, 80)];  // ボタンのサイズを指定する
     [buttonB setBackgroundImage:imga forState:UIControlStateNormal];  // 画像をセットする

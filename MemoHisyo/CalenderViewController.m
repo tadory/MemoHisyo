@@ -7,6 +7,7 @@
 //
 
 #import "CalenderViewController.h"
+// #import "TimeViewController.h"
 
 @interface CalenderViewController ()
 
@@ -43,7 +44,7 @@
             action:@selector(memo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    UIImage *img2 = [UIImage imageNamed:@"m.png"];  // ボタンにする画像を生成する
+    UIImage *img2 = [UIImage imageNamed:@"settei.png"];  // ボタンにする画像を生成する
     UIButton *btn2 = [[UIButton alloc]
                      initWithFrame:CGRectMake(160, 443, 140, 80)];  // ボタンのサイズを指定する
     [btn2 setBackgroundImage:img2 forState:UIControlStateNormal];  // 画像をセットする
@@ -51,6 +52,15 @@
     [btn2 addTarget:self
             action:@selector(done) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
+    
+    UIButton *btn3 = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+                      btn3.frame=CGRectMake(90, 375, 141, 42);
+    [btn3 setTitle:@"決定"forState:UIControlStateNormal];
+    btn3.titleLabel.font = [UIFont systemFontOfSize:30.0];
+    [btn3 addTarget:self action:@selector(will)forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn3];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,6 +106,11 @@
 {
 
 }
+-(void)will
+{
+    [self performSegueWithIdentifier:@"toTime" sender:nil];
+}
+
 
 
 @end

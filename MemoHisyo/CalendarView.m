@@ -93,7 +93,7 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.tag = i+1;
         button.titleLabel.text = [NSString stringWithFormat:@"%d",i+1];
-        [button setTitle:[NSString stringWithFormat:@"%d",i+1] forState:UIControlStateNormal];
+        [button setTitle:[NSString stringWithFormat:@"%d",i+1]forState:UIControlStateNormal];
         [button setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
         [button.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:15.0f]];
         [button addTarget:self action:@selector(tappedDate:) forControlEvents:UIControlEventTouchUpInside];
